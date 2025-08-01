@@ -2,32 +2,84 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Tudor's 3D Portfolio</title>
-  <link rel="stylesheet" href="style.css"/>
+  <meta charset="UTF-8">
+  <title>Suciu Tudor Alex</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pier+Sans&display=swap" rel="stylesheet">
   <style>
-    @font-face {
-      font-family: 'PiersSans';
-      src: url('pier-regular.otf') format('opentype');
+    body {
+      margin: 0;
+      font-family: 'Pier Sans', sans-serif;
+      background-color: #111;
+      color: #fff;
+    }
+    header {
+      padding: 60px 30px 20px;
+      text-align: center;
+      max-width: 900px;
+      margin: auto;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+    header p {
+      font-size: 1.1rem;
+      line-height: 1.6;
+      color: #ccc;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 30px;
+      padding: 40px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .card {
+      background: #222;
+      border-radius: 10px;
+      overflow: hidden;
+      text-align: center;
+      transition: transform 0.2s ease;
+    }
+    .card:hover {
+      transform: scale(1.03);
+    }
+    .card img {
+      width: 100%;
+      aspect-ratio: 1 / 1;
+      object-fit: cover;
+      display: block;
+    }
+    .card-title {
+      padding: 15px;
+      font-size: 1.1rem;
+      color: #fff;
+    }
+    a {
+      text-decoration: none;
     }
   </style>
 </head>
 <body>
-  <div class="container">
-    <h1>Tudor Suciu</h1>
-    <p class="description">
-      Interior & exterior 3D visualization specialist with a focus on photorealistic renders. I bring architectural spaces to life using clean lighting, strong composition, and subtle material details. My main tools include, 3ds Max, and Corona Renderer, and I'm passionate about transforming concepts into compelling visual stories.
-    </p>
-    <p class="contact">📬 suciutudoralex@gmail.com</p>
-    <div class="grid">
-<a href="HouseB/index.html" class="thumb" style="background-image:url('HouseB/1. Hol 1.jpg');">HouseB</a>
-<a href="ApartamentB/index.html" class="thumb" style="background-image:url('ApartamentB/BUCATARiE 1.jpg');">ApartamentB</a>
-<a href="ApartamentL/index.html" class="thumb" style="background-image:url('ApartamentL/DS_Persp1.jpg');">ApartamentL</a>
-<a href="ApartamentN/index.html" class="thumb" style="background-image:url('ApartamentN/1.Baie Copil Cada.jpg');">ApartamentN</a>
-<a href="Aus Interior/index.html" class="thumb" style="background-image:url('Aus Interior/9 Settlers Lakeport Bedroom.jpg');">Aus Interior</a>
-<a href="Aus Exterior/index.html" class="thumb" style="background-image:url('Aus Exterior/placeholder.jpg');">Aus Exterior</a>
-    </div>
+  <header>
+    <h1>Suciu Tudor Alex</h1>
+    <p>Interior & exterior 3D visualization specialist with a focus on photorealistic renders. I bring architectural spaces to life using clean lighting, strong composition, and subtle material details. My main tools include 3ds Max and Corona Renderer, and I'm passionate about transforming concepts into compelling visual stories.</p>
+  </header>
+  <div class="grid">
+    <a href="HouseB/index.html">
+      <div class="card">
+        <img src="HouseB/images/20. Baie dormitor matrimonial 3.jpg" alt="House B">
+        <div class="card-title">House B</div>
+      </div>
+    </a>
+    <a href="ApartamentB/index.html">
+      <div class="card">
+        <img src="ApartamentB/images/BUCATARiE DETALiU.jpg" alt="Apartament B">
+        <div class="card-title">Apartament B</div>
+      </div>
+    </a>
   </div>
+<footer style="margin-top:40px;"><p>Contact: <a href="mailto:suciutudoralex@gmail.com">suciutudoralex@gmail.com</a></p></footer>
 </body>
 </html>
