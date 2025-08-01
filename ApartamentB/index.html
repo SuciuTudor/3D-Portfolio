@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>Apartament B</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pier+Sans&display=swap" rel="stylesheet">
+  
+<style>
+body {
+  background: #111;
+  color: white;
+  font-family: 'Pier Sans', sans-serif;
+  padding: 40px;
+}
+.gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 20px;
+}
+.gallery img {
+  width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+}
+a {
+  color: #fff;
+}
+</style>
+
+</head>
+<body>
+  <a href="../index.html" style="color:white;text-decoration:none;margin-bottom:20px;display:inline-block;">← Back</a>
+  <h1>Apartament B</h1>
+  <div class="gallery"><img src="images/BUCATARiE 1.jpg" alt="">
+<img src="images/BUCATARiE 2.jpg" alt="">
+<img src="images/BUCATARiE 3.jpg" alt="">
+<img src="images/BUCATARiE DETALiU.jpg" alt="">
+<img src="images/BUCATARiE DETALiU 1.jpg" alt="">
+<img src="images/CAMERA DE Zi 1.jpg" alt="">
+<img src="images/CAMERA DE Zi.jpg" alt="">
+<img src="images/DORMiTOR.jpg" alt="">
+<img src="images/HOL.jpg" alt=""></div>
+  
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+  const images = document.querySelectorAll('.gallery img');
+  const viewer = document.createElement('div');
+  viewer.style.position = 'fixed';
+  viewer.style.top = 0;
+  viewer.style.left = 0;
+  viewer.style.width = '100%';
+  viewer.style.height = '100%';
+  viewer.style.background = 'rgba(0,0,0,0.9)';
+  viewer.style.display = 'flex';
+  viewer.style.alignItems = 'center';
+  viewer.style.justifyContent = 'center';
+  viewer.style.zIndex = 1000;
+  viewer.style.display = 'none';
+  document.body.appendChild(viewer);
+
+  const fullImg = document.createElement('img');
+  fullImg.style.maxWidth = '90%';
+  fullImg.style.maxHeight = '90%';
+  viewer.appendChild(fullImg);
+
+  let current = 0;
+  const show = (index) => {
+    current = index;
+    fullImg.src = images[index].src;
+    viewer.style.display = 'flex';
+  };
+
+  images.forEach((img, index) => {
+    img.addEventListener('click', () => show(index));
+  });
+
+  document.addEventListener('keydown', (e) => {
+    if (viewer.style.display !== 'flex') return;
+    if (e.key === 'Escape') viewer.style.display = 'none';
+    if (e.key === 'ArrowRight') show((current + 1) % images.length);
+    if (e.key === 'ArrowLeft') show((current - 1 + images.length) % images.length);
+  });
+
+  viewer.addEventListener('click', () => viewer.style.display = 'none');
+});
+</script>
+
+</body>
+</html>
