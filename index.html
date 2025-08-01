@@ -2,84 +2,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <title>Suciu Tudor Alex</title>
-  <link href="https://fonts.googleapis.com/css2?family=Pier+Sans&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tudor Suciu</title>
   <style>
+    @font-face {
+      font-family: 'PiersSans';
+      src: url('pier-regular.otf') format('opentype');
+    }
     body {
+      font-family: 'PiersSans', sans-serif;
       margin: 0;
-      font-family: 'Pier Sans', sans-serif;
-      background-color: #111;
-      color: #fff;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 20px;
     }
-    header {
-      padding: 60px 30px 20px;
+    h1 { font-size: 2em; margin-bottom: 0; }
+    p.description {
+      max-width: 600px;
       text-align: center;
-      max-width: 900px;
-      margin: auto;
-    }
-    header h1 {
-      font-size: 2.5rem;
-      margin-bottom: 20px;
-    }
-    header p {
-      font-size: 1.1rem;
-      line-height: 1.6;
+      margin: 10px 0 30px;
+      font-size: 1em;
       color: #ccc;
     }
-    .grid {
+    .projects {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 30px;
-      padding: 40px;
-      max-width: 1200px;
-      margin: auto;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 20px;
+      width: 100%;
+      max-width: 900px;
     }
-    .card {
+    .project {
       background: #222;
       border-radius: 10px;
       overflow: hidden;
       text-align: center;
-      transition: transform 0.2s ease;
     }
-    .card:hover {
-      transform: scale(1.03);
-    }
-    .card img {
+    .project img {
       width: 100%;
       aspect-ratio: 1 / 1;
       object-fit: cover;
-      display: block;
     }
-    .card-title {
-      padding: 15px;
-      font-size: 1.1rem;
-      color: #fff;
+    .project-title {
+      color: white;
+      font-size: 1.1em;
+      padding: 10px;
     }
-    a {
-      text-decoration: none;
+    footer {
+      margin-top: 40px;
+      font-size: 0.9em;
+      color: white;
     }
   </style>
 </head>
 <body>
-  <header>
-    <h1>Suciu Tudor Alex</h1>
-    <p>Interior & exterior 3D visualization specialist with a focus on photorealistic renders. I bring architectural spaces to life using clean lighting, strong composition, and subtle material details. My main tools include 3ds Max and Corona Renderer, and I'm passionate about transforming concepts into compelling visual stories.</p>
-  </header>
-  <div class="grid">
-    <a href="HouseB/index.html">
-      <div class="card">
-        <img src="HouseB/images/20. Baie dormitor matrimonial 3.jpg" alt="House B">
-        <div class="card-title">House B</div>
-      </div>
+  <h1>Tudor Suciu</h1>
+  <p class="description">
+    Interior & exterior 3D visualization specialist with a focus on photorealistic renders.
+    I bring architectural spaces to life using clean lighting, strong composition, and subtle material details.
+    My main tools include 3ds Max and Corona Renderer, and I'm passionate about transforming concepts into compelling visual stories.
+  </p>
+  <div class="projects">
+    
+    <a class="project" href="HouseB/index.html">
+      <img src="HouseB/preview.jpg" alt="HouseB preview">
+      <div class="project-title">HouseB</div>
     </a>
-    <a href="ApartamentB/index.html">
-      <div class="card">
-        <img src="ApartamentB/images/BUCATARiE DETALiU.jpg" alt="Apartament B">
-        <div class="card-title">Apartament B</div>
-      </div>
+    
+    <a class="project" href="ApartamentB/index.html">
+      <img src="ApartamentB/preview.jpg" alt="ApartamentB preview">
+      <div class="project-title">ApartamentB</div>
     </a>
+    
+    <a class="project" href="ApartamentL/index.html">
+      <img src="ApartamentL/preview.jpg" alt="ApartamentL preview">
+      <div class="project-title">ApartamentL</div>
+    </a>
+    
+    <a class="project" href="ApartamentN/index.html">
+      <img src="ApartamentN/preview.jpg" alt="ApartamentN preview">
+      <div class="project-title">ApartamentN</div>
+    </a>
+    
+    <a class="project" href="Aus Interior/index.html">
+      <img src="Aus Interior/preview.jpg" alt="Aus Interior preview">
+      <div class="project-title">Aus Interior</div>
+    </a>
+    
+    <a class="project" href="Aus Exterior/index.html">
+      <img src="Aus Exterior/preview.jpg" alt="Aus Exterior preview">
+      <div class="project-title">Aus Exterior</div>
+    </a>
+    
   </div>
-<footer style="margin-top:40px;"><p>Contact: <a href="mailto:suciutudoralex@gmail.com">suciutudoralex@gmail.com</a></p></footer>
+  <footer>Contact: suciutudoralex@gmail.com</footer>
 </body>
 </html>
