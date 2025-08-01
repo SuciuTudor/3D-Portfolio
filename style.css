@@ -1,0 +1,45 @@
+
+body {
+  margin: 0;
+  font-family: 'PiersSans', sans-serif;
+  background: #111;
+  color: white;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+.description {
+  font-size: 1.2rem;
+  margin-bottom: 1rem;
+}
+.contact {
+  margin-bottom: 2rem;
+  color: #ccc;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1rem;
+}
+.thumb {
+  display: block;
+  background-size: cover;
+  background-position: center;
+  padding-bottom: 100%;
+  position: relative;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1rem;
+}
+.thumb::after {
+  content: attr(data-label);
+  position: absolute;
+  bottom: 0;
+  background: rgba(0,0,0,0.6);
+  width: 100%;
+  padding: 0.5rem;
+}
